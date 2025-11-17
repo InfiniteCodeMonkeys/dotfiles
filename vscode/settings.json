@@ -1,0 +1,50 @@
+{
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "diffEditor.wordWrap": "on",
+  "editor.wordWrap": "on",
+  "editor.bracketPairColorization.enabled": true,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "[prisma]": {
+    "editor.defaultFormatter": "Prisma.prisma",
+    "editor.formatOnSave": true
+  },
+  "terminal.integrated.env.osx": {},
+  "editor.inlineSuggest.enabled": true,
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": false,
+    "markdown": true,
+    "scminput": false
+  },
+  "console-ninja.featureSet": "Community",
+  "editor.formatOnPaste": true,
+
+  "[rust]": {
+    "editor.defaultFormatter": "rust-lang.rust-analyzer",
+    "editor.formatOnSave": true
+  },
+  "xstate.nestTypegenFiles": false,
+  "explorer.fileNesting.patterns": {
+    "Cargo.toml": "Cargo.lock"
+  },
+  "editor.formatOnSave": true,
+  "prisma.showPrismaDataPlatformNotification": false,
+  "remote.SSH.showLoginTerminal": true,
+  "remote.SSH.path": "/usr/bin/ssh",
+  "[python]": {
+    "editor.wordBasedSuggestions": "off"
+  },
+  "workbench.colorTheme": "Night Owl",
+  "github.copilot.nextEditSuggestions.enabled": true,
+  "editor.formatOnSaveMode": "file",
+  "[go]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "golang.go"
+  },
+  "go.toolsManagement.autoUpdate": true,
+  "security.workspace.trust.untrustedFiles": "open"
+}

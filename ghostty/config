@@ -1,0 +1,32 @@
+command = "/bin/zsh -l"
+
+font-family = Berkeley Mono
+font-size = 16
+theme = Github Dark High Contrast
+cursor-style = block
+title = " "
+window-padding-balance = true
+window-padding-x = 5
+window-padding-y = 0
+window-save-state = always
+
+# keybindings
+keybind = cmd+a>r=reload_config
+keybind = cmd+a>x=close_surface
+
+# tabs
+keybind = cmd+a>n=new_tab
+keybind = cmd+a>shift+l=next_tab
+keybind = cmd+a>shift+h=previous_tab
+
+# split
+keybind = cmd+a>\=new_split:right
+keybind = cmd+a>-=new_split:down
+
+keybind = cmd+a>j=goto_split:bottom
+keybind = cmd+a>k=goto_split:top
+keybind = cmd+a>h=goto_split:left
+keybind = cmd+a>l=goto_split:right
+
+keybind = cmd+a>e=equalize_splits
+
