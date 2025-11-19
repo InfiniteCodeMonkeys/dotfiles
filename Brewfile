@@ -18,40 +18,34 @@ brew "ripgrep"
 brew "bat"
 brew "htop"
 brew "jq"
-# brew "tmux"
+brew "lazygit"
+brew "neovim"
+brew "zoxide"
+brew "eza"
+brew "azure-cli"
 
 ############################################
 # Additional quality-of-life CLI utilities
 ############################################
-brew "fd"              # better find
 brew "gh"              # GitHub CLI
 brew "tree"
 brew "wget"
 
-############################################
-# Fonts (for terminals like Ghostty)
-############################################
-cask "font-jetbrains-mono"
-cask "font-jetbrains-mono-nerd-font"
 
 ############################################
 # Developer Applications
 ############################################
 cask "ghostty"
 cask "visual-studio-code"
-# cask "iterm2"          # optional fallback terminal
 cask "google-chrome"
 
 ############################################
 # Optional: tools people usually want
 ############################################
 cask "docker"        # Docker Desktop
-cask "postman"
+cask "bruno"
 cask "spotify"
 cask "notion"
-# brew "postgresql"
-# brew "redis"
-# brew "awscli"
 
 ############################################
 # VSCode Extensions (optional)

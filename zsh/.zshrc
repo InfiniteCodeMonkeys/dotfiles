@@ -1,8 +1,4 @@
 export AWS_PROFILE=myprofile
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/zulu-17.jdk/Contents/Home
-export ANDROID_HOME=/Users/mike/Library/Android/sdk
-export PATH=$PATH:$ANDROID_HOME/emulator
-export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
@@ -14,7 +10,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="dracula/dracula"
+# ZSH_THEME="dracula/dracula"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -31,11 +27,11 @@ ZSH_THEME="dracula/dracula"
 
 # Uncomment one of the following lines to change the auto-update behavior
 # zstyle ':omz:update' mode disabled  # disable automatic updates
-# zstyle ':omz:update' mode auto      # update automatically without asking
+ zstyle ':omz:update' mode auto      # update automatically without asking
 # zstyle ':omz:update' mode reminder  # just remind me to update when it's time
 
 # Uncomment the following line to change how often to auto-update (in days).
-# zstyle ':omz:update' frequency 13
+ zstyle ':omz:update' frequency 13
 
 # Uncomment the following line if pasting URLs and other text is messed up.
 # DISABLE_MAGIC_FUNCTIONS="true"
@@ -76,7 +72,7 @@ ZSH_THEME="dracula/dracula"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(aliases azure eza fzf gh git thefuck zoxide)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -105,10 +101,17 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias dev="npm run dev"
+alias ok="npm run test && npm run lint"
+alias v='nvim'
+
 
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+export FZF_BASE=/path/to/fzf/install/dir
+eval $(thefuck --alias)
 
 squashon () {
   # If user just enters 'squashon', give help text
@@ -128,31 +131,6 @@ squashon () {
   fi
 }
 
-mookal () {
-  echo 'BIG MOOKS'
-}
-
-dev () {
-  npm run dev
-}
-
-ok () {
-  npm run lint && npm run test
-}
-
-fix () {
-  npm run fix
-}
-
-PATH=~/.console-ninja/.bin:$PATH
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/mike/Desktop/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/mike/Desktop/google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/Users/mike/Desktop/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/mike/Desktop/google-cloud-sdk/completion.zsh.inc'; fi
-
 . "$HOME/.local/bin/env"
 export PATH=$PATH:$HOME/go/bin
 export PATH="$HOME/scripts:$PATH"
-
-alias v='nvim'
